@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "project": {
+    "id": "coach-demo",
+    "title": "口语 coach 首轮试用（虚构示例）",
+    "goal": "首轮试用者用首批课程完成一次完整口语练习",
+    "delivery": "约定的最小流程、首批素材、接入与完整流程验证",
+    "done_when": [
+      "首批素材通过内容与格式检查",
+      "主线正确加载素材并衔接必要练习步骤",
+      "完整用户流程通过验证并可供试用"
+    ],
+    "out_of_scope": [
+      "扩大课程覆盖",
+      "新增付费或公开发布"
+    ],
+    "scope_status": "fixed",
+    "time_zone": "Asia/Hong_Kong"
+  },
+  "plan_version": 1,
+  "revision": 0,
+  "coordinator": {
+    "id": "",
+    "generation": 0
+  },
+  "execution": {
+    "capacity": 2,
+    "capacity_basis": "本虚构案例假设存在两个已授权且可并行承担任务的执行者；真实项目默认一个",
+    "state": "unknown",
+    "source": "虚构示例，没有真实运行中的产品任务"
+  },
+  "authorization": {
+    "allowed": [
+      "仅展示和计算虚构案例"
+    ],
+    "limits": [
+      "不得据此操作真实口语 coach 项目"
+    ]
+  },
+  "tasks": [
+    {
+      "id": "A",
+      "part": "A 交付与接口约定",
+      "branch": "主线",
+      "deliverable": "首轮范围与素材接口",
+      "done_when": [
+        "首轮范围与素材接口满足已约定的检查要求"
+      ],
+      "verify_with": "按示例约定检查成果；真实试用须替换为实际方法",
+      "depends_on": [],
+      "owner": "示例执行者",
+      "state": "verified",
+      "unknowns": [],
+      "next_action": "已取得本示例的完成资格",
+      "weight": 10,
+      "remaining_minutes": {
+        "low": 0,
+        "high": 0,
+        "basis": "虚构示例输入，只用于演示资源受限排程"
+      },
+      "evidence": [
+        {
+          "path": "example-verification.txt",
+          "method": "读取明确标为虚构的展示回执",
+          "result": "passed",
+          "checked_at": "2026-10-22T12:00:00+00:00",
+          "note": "仅作为虚构计算输入，不代表真实产品验证"
+        }
+      ]
+    },
+    {
+      "id": "B1",
+      "part": "B 最小练习流程",
+      "branch": "主线",
+      "deliverable": "基础界面",
+      "done_when": [
+        "基础界面满足已约定的检查要求"
+      ],
+      "verify_with": "按示例约定检查成果；真实试用须替换为实际方法",
+      "depends_on": [
+        "A"
+      ],
+      "owner": "示例执行者",
+      "state": "verified",
+      "unknowns": [],
+      "next_action": "已取得本示例的完成资格",
+      "weight": 10,
+      "remaining_minutes": {
+        "low": 0,
+        "high": 0,
+        "basis": "虚构示例输入，只用于演示资源受限排程"
+      },
+      "evidence": [
+        {
+          "path": "example-verification.txt",
+          "method": "读取明确标为虚构的展示回执",
+          "result": "passed",
+          "checked_at": "2026-10-22T12:00:00+00:00",
+          "note": "仅作为虚构计算输入，不代表真实产品验证"
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "part": "B 最小练习流程",
+      "branch": "主线",
+      "deliverable": "录音与反馈",
+      "done_when": [
+        "录音与反馈满足已约定的检查要求"
+      ],
+      "verify_with": "按示例约定检查成果；真实试用须替换为实际方法",
+      "depends_on": [
+        "B1"
+      ],
+      "owner": "示例执行者",
+      "state": "pending",
+      "unknowns": [
+        "反馈流程的实际效果尚待验证"
+      ],
+      "next_action": "完成并验证该交付",
+      "weight": 15,
+      "remaining_minutes": {
+        "low": 45,
+        "high": 65,
+        "basis": "虚构示例输入，只用于演示资源受限排程"
+      },
+      "evidence": []
+    },
+    {
+      "id": "B3",
+      "part": "B 最小练习流程",
+      "branch": "主线",
+      "deliverable": "流程衔接",
+      "done_when": [
+        "流程衔接满足已约定的检查要求"
+      ],
+      "verify_with": "按示例约定检查成果；真实试用须替换为实际方法",
+      "depends_on": [
+        "B2"
+      ],
+      "owner": "示例执行者",
+      "state": "pending",
+      "unknowns": [],
+      "next_action": "完成并验证该交付",
+      "weight": 5,
+      "remaining_minutes": {
+        "low": 15,
+        "high": 25,
+        "basis": "虚构示例输入，只用于演示资源受限排程"
+      },
+      "evidence": []
+    },
+    {
+      "id": "C1",
+      "part": "C 首批课程素材",
+      "branch": "素材支线",
+      "deliverable": "主题与级别约定",
+      "done_when": [
+        "主题与级别约定满足已约定的检查要求"
+      ],
+      "verify_with": "按示例约定检查成果；真实试用须替换为实际方法",
+      "depends_on": [
+        "A"
+      ],
+      "owner": "示例执行者",
+      "state": "verified",
+      "unknowns": [],
+      "next_action": "已取得本示例的完成资格",
+      "weight": 5,
+      "remaining_minutes": {
+        "low": 0,
+        "high": 0,
+        "basis": "虚构示例输入，只用于演示资源受限排程"
+      },
+      "evidence": [
+        {
+          "path": "example-verification.txt",
+          "method": "读取明确标为虚构的展示回执",
+          "result": "passed",
+          "checked_at": "2026-10-22T12:00:00+00:00",
+          "note": "仅作为虚构计算输入，不代表真实产品验证"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "part": "C 首批课程素材",
+      "branch": "素材支线",
+      "deliverable": "首课样例检查",
+      "done_when": [
+        "首课样例检查满足已约定的检查要求"
+      ],
+      "verify_with": "按示例约定检查成果；真实试用须替换为实际方法",
+      "depends_on": [
+        "C1"
+      ],
+      "owner": "示例执行者",
+      "state": "verified",
+      "unknowns": [],
+      "next_action": "已取得本示例的完成资格",
+      "weight": 5,
+      "remaining_minutes": {
+        "low": 0,
+        "high": 0,
+        "basis": "虚构示例输入，只用于演示资源受限排程"
+      },
+      "evidence": [
+        {
+          "path": "example-verification.txt",
+          "method": "读取明确标为虚构的展示回执",
+          "result": "passed",
+          "checked_at": "2026-10-22T12:00:00+00:00",
+          "note": "仅作为虚构计算输入，不代表真实产品验证"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "part": "C 首批课程素材",
+      "branch": "素材支线",
+      "deliverable": "剩余首批内容",
+      "done_when": [
+        "剩余首批内容满足已约定的检查要求"
+      ],
+      "verify_with": "按示例约定检查成果；真实试用须替换为实际方法",
+      "depends_on": [
+        "C2"
+      ],
+      "owner": "示例执行者",
+      "state": "pending",
+      "unknowns": [],
+      "next_action": "完成并验证该交付",
+      "weight": 10,
+      "remaining_minutes": {
+        "low": 25,
+        "high": 35,
+        "basis": "虚构示例输入，只用于演示资源受限排程"
+      },
+      "evidence": []
+    },
+    {
+      "id": "C4",
+      "part": "C 首批课程素材",
+      "branch": "素材支线",
+      "deliverable": "整批格式检查与接入条件",
+      "done_when": [
+        "整批格式检查与接入条件满足已约定的检查要求"
+      ],
+      "verify_with": "按示例约定检查成果；真实试用须替换为实际方法",
+      "depends_on": [
+        "C3"
+      ],
+      "owner": "示例执行者",
+      "state": "pending",
+      "unknowns": [],
+      "next_action": "完成并验证该交付",
+      "weight": 5,
+      "remaining_minutes": {
+        "low": 5,
+        "high": 10,
+        "basis": "虚构示例输入，只用于演示资源受限排程"
+      },
+      "evidence": []
+    },
+    {
+      "id": "D",
+      "part": "D 接入",
+      "branch": "主线",
+      "deliverable": "主线读取素材并衔接练习",
+      "done_when": [
+        "主线读取素材并衔接练习满足已约定的检查要求"
+      ],
+      "verify_with": "按示例约定检查成果；真实试用须替换为实际方法",
+      "depends_on": [
+        "B3",
+        "C4"
+      ],
+      "owner": "示例执行者",
+      "state": "pending",
+      "unknowns": [],
+      "next_action": "完成并验证该交付",
+      "weight": 15,
+      "remaining_minutes": {
+        "low": 20,
+        "high": 30,
+        "basis": "虚构示例输入，只用于演示资源受限排程"
+      },
+      "evidence": []
+    },
+    {
+      "id": "E",
+      "part": "E 整体验证与交付",
+      "branch": "主线",
+      "deliverable": "完整练习流程通过检查并交付试用",
+      "done_when": [
+        "完整练习流程通过检查并交付试用满足已约定的检查要求"
+      ],
+      "verify_with": "按示例约定检查成果；真实试用须替换为实际方法",
+      "depends_on": [
+        "D"
+      ],
+      "owner": "示例执行者",
+      "state": "pending",
+      "unknowns": [],
+      "next_action": "完成并验证该交付",
+      "weight": 20,
+      "remaining_minutes": {
+        "low": 20,
+        "high": 40,
+        "basis": "虚构示例输入，只用于演示资源受限排程"
+      },
+      "evidence": []
+    }
+  ],
+  "attention": [],
+  "handoff": {
+    "next_action": "虚构案例：完成 B2 录音与反馈、C3 剩余素材；二者通过后汇合接入",
+    "notes": [
+      "此目录为虚构计算与展示，不是用户真实项目状态。"
+    ],
+    "failures": [],
+    "resources": [
+      "example-verification.txt：明确标为虚构的输入回执"
+    ]
+  },
+  "history": []
+}
