@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Project Guide 0.1 — local state, evidence-backed metrics and snapshot views.
+"""Are We There Yet? 0.1.1 — local state, evidence-backed metrics and snapshot views.
 
 Python 3.9+, standard library. Mutations require POSIX flock (macOS/Linux).
 This helper records assertions; the agent remains responsible for meaningful
@@ -27,7 +27,7 @@ try:
 except ImportError:
     fcntl = None
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 STATES = {"pending", "in_progress", "awaiting_verification", "verified", "blocked"}
 LABELS = {"pending": "未开始", "in_progress": "最后记录：执行中", "awaiting_verification": "待验证",
           "verified": "已验证", "blocked": "遇阻"}
@@ -665,5 +665,5 @@ if __name__ == "__main__":
     try:
         main()
     except (GuideError, OSError, ValueError, TypeError, KeyError, RecursionError) as error:
-        print("Project Guide：%s" % error, file=sys.stderr)
+        print("到哪了 · Are We There Yet?：%s" % error, file=sys.stderr)
         sys.exit(2)

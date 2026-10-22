@@ -12,7 +12,7 @@ import sys
 import tempfile
 import unittest
 
-SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "project_guide.py"
+SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "are_we_there_yet.py"
 
 
 def task(key, weight, deps=None, minutes=None):
@@ -40,7 +40,7 @@ def plan():
 
 class GuideCLI(unittest.TestCase):
     def setUp(self):
-        self.tmp = tempfile.TemporaryDirectory(prefix="project-guide-test-")
+        self.tmp = tempfile.TemporaryDirectory(prefix="are-we-there-yet-test-")
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
         self.seed = self.root / "seed.json"

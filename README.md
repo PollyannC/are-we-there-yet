@@ -1,8 +1,10 @@
-# Project Guide · 项目导航
+# 到哪了 · Are We There Yet?
+
+**简体中文** | [English](README.en.md)
 
 **AI 一直在做事，你却不知道项目做到哪了、离交付还差多远。**
 
-Project Guide 是一个给 AI 编程工具使用的 Skill：让 AI 维护交付计划、可信进度和下一步，自主处理常规工程选择，把需要你判断的取舍说清楚。
+「到哪了 · Are We There Yet?」是一个给 AI 编程工具使用的 Skill：让 AI 维护交付计划、可信进度和下一步，自主处理常规工程选择，把需要你判断的取舍说清楚。
 
 你原本只想用 AI 做出一个网站或应用。随着功能、素材和修复任务增加，工作分散在不同聊天里：每个地方都在产出，项目的全貌却越来越难看清。
 
@@ -16,7 +18,7 @@ Project Guide 是一个给 AI 编程工具使用的 Skill：让 AI 维护交付�
 
 你因此要花很多精力盯着 AI、整理信息、催它继续，仍然缺少一份可信的项目全局。
 
-## Project Guide 能帮你做什么
+## 「到哪了」能帮你做什么
 
 启用后，AI 会把分散的工作整理成有完成标准、有依赖关系的交付部分，并在执行过程中维护同一份计划和进度记录。
 
@@ -43,41 +45,43 @@ AI 会在关键进展、阻塞或实质变化时更新记录，并继续推进�
 
 尤其适合通过自然语言委托 AI、没有编程背景，或难以逐项审查陌生工程工作的使用者。简单问答和一次性小修改通常无需建立完整项目计划。
 
-**当前版本：v0.1.0 试用版。** 建议先在一条交付终点明确的小支线中使用，再根据实际体验逐步改进。
+**当前版本：v0.1.1 试用版。** 建议先在一条交付终点明确的小支线中使用，再根据实际体验逐步改进。
 
 ## 安装
 
 把下面这句话交给你使用的 AI 编程工具：
 
 ```text
-请从 https://github.com/PollyannC/project-guide 安装项目导航 Skill。
-技能目录是仓库中的 project-guide/，请安装整个文件夹，保留 scripts、references、agents 和 assets。
+请从 https://github.com/PollyannC/are-we-there-yet 安装「到哪了 · Are We There Yet?」Skill。
+技能目录是仓库中的 are-we-there-yet/，请安装整个文件夹，保留 scripts、references、agents 和 assets。
 按当前工具支持的技能安装方式处理，安装后检查入口和附带工具是否可用。
 ```
 
-私有仓库需要已有 GitHub 访问权限。也可从 [Releases](https://github.com/PollyannC/project-guide/releases) 下载 `project-guide-v0.1.0.zip`，解压后安装其中的 `project-guide/` 文件夹。
+私有仓库需要已有 GitHub 访问权限。也可从 [Releases](https://github.com/PollyannC/are-we-there-yet/releases) 下载 `are-we-there-yet-v0.1.1.zip`，解压后安装其中的 `are-we-there-yet/` 文件夹。
 
-本版已在 Codex 本地环境试用；Codex 的技能调用名是 `$project-guide`。其他支持 `SKILL.md` 的工具可以读取同一入口，但宿主发现方式、权限和能力需要分别验证。没有文件能力时，协作规则可在聊天里使用，持久保存和自动计算会降级。
+本版已在 Codex 本地环境试用；Codex 的技能调用名是 `$are-we-there-yet`。其他支持 `SKILL.md` 的工具可以读取同一入口，但宿主发现方式、权限和能力需要分别验证。没有文件能力时，协作规则可在聊天里使用，持久保存和自动计算会降级。
 
 ## 开始使用
 
 在实际项目聊天中输入：
 
 ```text
-使用 $project-guide 接手当前项目。先读取已有需求和成果，整理本轮交付终点、各部分交付和依赖，建立固定 dashboard，然后继续推进已授权工作。常规工程选择由你处理；需要我决定时，说明收益、代价、风险和你的建议。
+使用 $are-we-there-yet 接手当前项目。先读取已有需求和成果，整理本轮交付终点、各部分交付和依赖，建立固定 dashboard，然后继续推进已授权工作。常规工程选择由你处理；需要我决定时，说明收益、代价、风险和你的建议。
 ```
 
 梳理已有支线：
 
 ```text
-使用 $project-guide 梳理这条支线。告诉我已经验证了什么、离接回主线还缺什么、做到什么程度就结束。请保存状态，并推进当前能做的工作。
+使用 $are-we-there-yet 梳理这条支线。告诉我已经验证了什么、离接回主线还缺什么、做到什么程度就结束。请保存状态，并推进当前能做的工作。
 ```
 
 换聊天继续：
 
 ```text
-使用 $project-guide 恢复当前项目。先读取 .project-guide/project-state.json，核对真实成果、当前运行状态和协调者，再从下一项可执行工作继续。
+使用 $are-we-there-yet 恢复当前项目。先读取 .project-guide/project-state.json，核对真实成果、当前运行状态和协调者，再从下一项可执行工作继续。
 ```
+
+**从旧版升级：** 原 Project Guide 已更名为「到哪了 · Are We There Yet?」，调用名改为 `$are-we-there-yet`。已有项目继续使用 `.project-guide/` 中的状态，无需搬动或重新初始化。安装新版后请移除旧的 `project-guide` 技能安装，避免重复发现；保留项目中的 `.project-guide/` 数据目录。
 
 若当前聊天尚未发现新安装的技能，可打开一个新的项目聊天，或直接提供已安装 `SKILL.md` 的路径。
 
@@ -100,16 +104,18 @@ AI 会在关键进展、阻塞或实质变化时更新记录，并继续推进�
 ## 文件结构
 
 ```text
-project-guide/
+are-we-there-yet/
   SKILL.md
   agents/openai.yaml
   references/
     state-and-metrics.md
     execution-and-decisions.md
     presentation.md
-  scripts/project_guide.py
+  scripts/are_we_there_yet.py
   assets/example-project/
-  tests/test_project_guide.py
+  tests/test_are_we_there_yet.py
+README.md
+README.en.md
 examples/dashboard.md
 ```
 
@@ -120,7 +126,7 @@ examples/dashboard.md
 贡献者可在仓库根目录重跑：
 
 ```bash
-python3 -B -m unittest discover -s project-guide/tests -v
+python3 -B -m unittest discover -s are-we-there-yet/tests -v
 ```
 
 后续优先根据实际使用修正信息层级、更新频率、估算依据和恢复体验。反馈时请描述任务目标、预期行为、实际行为及是否有可复现材料；移除个人资料、凭证和私有项目内容。

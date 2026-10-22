@@ -1,13 +1,15 @@
 ---
-name: project-guide
+name: are-we-there-yet
 description: Use when a user delegates a multi-step AI coding project and needs project navigation, a persistent dashboard, mainline/branch coordination, evidence-backed progress, or help judging when human decisions are needed. Especially relevant to nontechnical vibe coding, scattered execution, repeated stops, and cross-session recovery. Small one-step edits and ordinary Q&A do not need this workflow.
 metadata:
-  short-description: 项目导航：有终点、有依据、能接续的 AI 协作
+  short-description: 到哪了：有终点、有依据、能接续的 AI 协作
 ---
 
-# 项目导航 · Project Guide
+# 到哪了 · Are We There Yet?
 
 帮助使用者随时回答：交付什么、到哪里了、凭什么这样判断、接下来做什么、我需要做什么。用户掌握目标与实质取舍；AI 负责授权范围内的工程判断和持续推进。
+
+调用名：`$are-we-there-yet`。为接续旧项目，本版继续使用 `.project-guide/` 保存状态；改名不迁移或重建已有记录。
 
 ## 开始与恢复
 
@@ -30,9 +32,9 @@ metadata:
 用实际 skill 路径替换 `<skill>`，用实际项目路径替换 `<project>`：
 
 ```text
-python3 <skill>/scripts/project_guide.py --project <project> --help
-python3 <skill>/scripts/project_guide.py --project <project> status --json
-python3 <skill>/scripts/project_guide.py --project <project> card
+python3 <skill>/scripts/are_we_there_yet.py --project <project> --help
+python3 <skill>/scripts/are_we_there_yet.py --project <project> status --json
+python3 <skill>/scripts/are_we_there_yet.py --project <project> card
 ```
 
 权威记录只能经工具写入。非协调会话提交报告；不要直接编辑总状态来绕过所有权、代次或修订检查。没有可靠文件能力时，在聊天保留可复制的状态与交接记录，明确“未持久保存”；无互斥能力的环境限制为只读总览/独立报告，不伪装同步成功。

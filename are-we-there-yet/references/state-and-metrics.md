@@ -1,6 +1,6 @@
 # 状态、计算与工具
 
-工具：`python3 <skill>/scripts/project_guide.py --project <实际项目目录> <command>`。Python 3.9+，仅标准库。macOS/Linux 支持互斥保存；无 `flock` 的环境只读使用，不声称跨会话可安全写入。
+工具：`python3 <skill>/scripts/are_we_there_yet.py --project <实际项目目录> <command>`。Python 3.9+，仅标准库。macOS/Linux 支持互斥保存；无 `flock` 的环境只读使用，不声称跨会话可安全写入。
 
 ## 文件与事实来源
 
@@ -46,7 +46,7 @@
 AI 确认目标目录和计划后，将新候选写到本项目的 scratch 位置，初次执行：
 
 ```text
-python3 <skill>/scripts/project_guide.py --project <project> init --from <seed.json> --owner <实际会话标识>
+python3 <skill>/scripts/are_we_there_yet.py --project <project> init --from <seed.json> --owner <实际会话标识>
 ```
 
 会话标识优先用宿主实际 chat/session ID。没有宿主 ID 就为该协调会话生成 UUID 并在后续轮次复用，不用固定的 `AI` 冒充唯一会话。同一项目一个协调者；工具不是身份认证系统，其他会话必须遵守报告规则。
@@ -54,7 +54,7 @@ python3 <skill>/scripts/project_guide.py --project <project> init --from <seed.j
 开始/恢复先运行 `status --json` 取得当前状态、修订、代次、重算指标。检查实际执行器，核对成果和待合并报告；有合法写入资格才修改副本，通过下列命令保存：
 
 ```text
-python3 <skill>/scripts/project_guide.py --project <project> save --from <candidate.json> --owner <id> --generation <读取到的代次> --expected-revision <读取到的修订> --event progress --reason "已完成什么、依据是什么、下一步是什么"
+python3 <skill>/scripts/are_we_there_yet.py --project <project> save --from <candidate.json> --owner <id> --generation <读取到的代次> --expected-revision <读取到的修订> --event progress --reason "已完成什么、依据是什么、下一步是什么"
 ```
 
 `event` 支持 `progress/scope/split/blocked/decision/handoff/revalidate`。更新目标、交付、标准、依赖或权重通常升 `plan_version` 一版，使用 `scope` 并说明实际变化。等价细分可用 `split`，保持项目范围和每部分总权重；不得借拆分扩大承诺或增加进度。计划版本及修订冲突必须重新读取协调，不自动覆盖或循环强写。
