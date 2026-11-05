@@ -6,6 +6,16 @@
 
 Are We There Yet? is a skill for AI coding tools. It helps your AI maintain a delivery plan, evidence-backed progress, and clear next steps, handle routine engineering choices, and explain the tradeoffs that need your judgment.
 
+## What you get at a glance
+
+This fictional example shows the shape of a status card. Actual progress, estimates, and next steps depend on the project's records and verification.
+
+| Delivery goal | Verified | Still missing | Next step |
+|---|---|---|---|
+| Complete a first speaking-practice trial | Basic interface and first lesson sample | Recording feedback and the full flow are not yet verified | Finish recording feedback and check the end-to-end flow |
+
+[See the full dashboard example](examples/dashboard.md) (in Chinese) · [Install](#install) · [Get started](#get-started)
+
 You started with a simple goal: build a website or app with AI. Then features, content, and fixes spread across several chats. Every conversation produces something, but the overall project becomes harder to follow.
 
 Does any of this sound familiar?
@@ -57,7 +67,7 @@ The skill is in the are-we-there-yet/ directory. Install the entire folder, incl
 Use the installation method supported by this tool, then check that the skill entry point and bundled helper work.
 ```
 
-This private repository requires existing GitHub access. You can also download `are-we-there-yet-v0.1.1.zip` from [Releases](https://github.com/PollyannC/are-we-there-yet/releases) and install the `are-we-there-yet/` folder inside it.
+You can also download `are-we-there-yet-v0.1.1.zip` from [Releases](https://github.com/PollyannC/are-we-there-yet/releases) and install the `are-we-there-yet/` folder inside it.
 
 This release has been tried locally in Codex, where its invocation is `$are-we-there-yet`. Other tools that support `SKILL.md` can read the same entry point, but their discovery, permissions, and capabilities need separate validation. Without file access, the collaboration rules can still be used in chat, while persistent storage and automatic calculations are limited.
 
